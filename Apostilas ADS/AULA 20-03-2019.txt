@@ -1,0 +1,168 @@
+Algoritmo "Aula 20-03-2019"
+// by VAIS, bruno
+Var
+        exercicios: inteiro;
+        //Variaveis do primeiro exercício
+        nome : caractere
+        nota1: real
+        nota2:real
+        notaFim: real
+        //Variaveis do segundo exercício
+        n : real
+        //variaveis do terceiro exercício
+        n1 : real
+        n2 : real
+        //variaveis do quarto exercício
+        a : real
+        b : real
+        c : real
+
+Inicio
+// inicio dos programas e seleção dos exercicios
+// Não ligue para estrutura do 'Repita até' apesar dela ter explicações sobre ela, os exercicios
+// estão separados por comentario '/ /' e com demarcações bem definidas.
+
+   escreval ("*** Exercicios da aula 20/03/2019 de Algoritmo e lógica de programação I ***")
+
+   repita
+   // estrutura 'repita até', o repita indica o inicio de um loop
+  // o ate pode ser melhor explicado como "até que" pois vem seguido
+ //de uma condição, exemplo, Repita até que exercicios tenha valor 0
+          
+          
+
+   escreval ("Escolha o exercicio")
+   escreval ("1 - Calcular a Média de um aluno")
+   escreval ("2 - Saber se um número é Par ou Impar")
+   escreval ("3 - Imprimir o maior e menor numero")
+   escreval ("4 - Descubrir se 3 retas formam um triangulo")
+   escreval ("0 - para sair do programa")
+   leia (exercicios)
+   se (exercicios = 1)entao
+   
+   
+   
+   
+//Inicio do exercício 1, "Calcular Média de um aluno"
+            escreval(" *** Exercício Calcular média do aluno *** ")
+            escreval ("digite o nome do aluno")
+            leia (nome)
+            escreval ("digite a primeira nota do aluno")
+            leia (nota1)
+            escreval ("digite a segunda nota do aluno")
+            leia(nota2)
+            //notaFim recebe nota1+nota2 divido por 2, foi colocado as parênteses (nota1+nota2) por regra de precedência semelhante a matemática
+            notaFim <- (nota1 + nota2) / 2
+            //Compara média das notas, se é maior ou igual a 6
+            
+            se (notaFim >= 6) entao // inicio do bloco de código verdadeiro 'se'
+               escreval("Parabéns" ,nome, " sua nota foi ", notaFim, "você foi Aprovado")
+               escreval(" ")
+               escreval(" ")
+            fimse// fim do bloco de código verdadeiro 'se'
+            //Compara média das notas, se é maior ou igual a 4 E se é menor que 6
+            se (notaFim >= 4) e (notaFim <6)entao
+               escreval(nome, " sua nota foi ", notaFim, " você esta em Recuperação")
+               escreval(" ")
+               escreval(" ")
+            fimse
+            //compara se a média é menor que 4
+            se (notaFim < 4) entao
+                 escreval(nome, " sua nota foi ", notaFim," e esta reprovado, mas não é o fim do mundo, apenas estude mais no proxímo semestre")
+                 escreval(" ")
+                 escreval(" ")
+            fimse
+   
+   fimse
+//fim do exercício 1
+   
+   
+   se(exercicios = 2)entao
+// Inicio do exercício 2, PAR ou IMPAR? :D
+      escreval(" *** Exercício PAR ou IMPAR? ***")
+      escreva ("digite um numero: ")
+      leia(n)
+      //para descobrir se um numero é par ou impar vamo usar o resto da divisão
+      //isso poque, 10 dividio por 2 são 5, e RESTA 0, outro exemplo 8 divido por 2 são 4, e RESTA 0
+      //temos um padrão ai! Todo numero par dividido por 2 resta 0, a maioria das linguagens
+      //de programação tem um operador de resto da divisão, no Visualg é o mod
+      se (n mod 2 = 0)entao
+         escreval("o número ", n, " é PAR")
+         escreval(" ")
+         escreval(" ")
+      //a estrutura senao foi usada para o inverso da condição de se, ou seja
+      //se n mod 2 for diferente de 0
+      senao
+         escreval("o número ", n, " é Impar")
+         escreval(" ")
+         escreval(" ")
+      fimse
+
+   
+   fimse
+   //Fim do exercício 2
+   
+   
+   
+   
+   se(exercicios = 3)entao
+// inicio do exercício 3
+         escreval(" *** Exercício Maior e menor Números *** ")
+         escreva("digite o primeiro número: ")
+         leia (n1)
+         escreva("digite o segundo número: ")
+         leia (n2)
+         //compara se o numero 1 é maior que o numero 2
+         se (n1 > n2)entao
+              escreval(n1, " é maior que ", n2)
+              escreval(" ")
+              escreval(" ")
+         // novamente a estrutura do senao como a inversão da condição de se
+         senao
+              escreval(n2, " é maior que ", n1)
+              escreval(" ")
+              escreval(" ")
+         fimse
+   fimse
+   //Fim do exercício 3
+   se(exercicios =4)entao
+         // descobrir se 3 retas formam um triangulo
+         escreval(" *** Exercício três retas formam um triângulo *** ")
+         escreva("Digite o valor da primeira reta: ")
+         leia (a)
+         escreva ("Digite o valor da segunda reta: ")
+         leia (b)
+         escreva ("Digite o valor da terceira reta: ")
+         leia (c)
+         //Um triangulo pode existir se a soma de dois dos lados for sempre maior que
+         // o terceiro lado, A formula se da por:
+         // A + B > C E B + C > A E A + C > B
+         //exemplo: A =15  B = 30  C =40
+         //15 + 30 > 40
+         //Verdadeiro
+         //30 + 40 > 15
+         //Verdadeiro
+         //15 + 40 > 30
+         //Verdadeiro
+         //Então essas 3 retas formam um triangulo
+         
+         //faz a comparação usando a formula acima
+         se (a + b > c) e (b + c > a) e (a + c > b)entao
+            escreval("as retas ", a, ", ",b, " e ",c, " formam um triangulo!")
+            escreval(" ")
+            escreval(" ")
+         senao
+            escreval("as retas ", a, ", ",b, " e ",c, " NÃO formam um triangulo!")
+            escreval(" ")
+            escreval(" ")
+         
+         fimse
+         
+   
+   
+   fimse
+   // Fim do exercício 4!
+   ate (exercicios = 0) // condicional para o fim da estrutura Repita Até
+   //Fim dos exercícios, espero ter ajudado :D
+
+Fimalgoritmo
